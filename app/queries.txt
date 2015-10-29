@@ -1,0 +1,54 @@
+curl -X POST -H "Content-Type:application/json" -d '{"firstName":"Ahmad", "lastName":"john","email":"john@yhaoo.com","username":"johny","password":"testpass"}' localhost:3000/users
+
+curl -X POST -H "Content-Type:application/json" -d '{"email":"john@test.com"}' http://localhost:3000/users/562c70171c3d4165a9cad3b3
+
+curl -X POST -H "Content-Type:application/json" -d '{"IsSeen":false,"Title":"Do your homework"}' http://localhost:3000/taskcreate
+
+curl -X POST -H "Content-Type:application/json" -d '{"IsSeen":false,"AssignedTo":"562eaec6c6f949b9233a760d","Title":"In-active task","IsActive":false,"IsReward":false,"Reward":"no reward","CreatedBy":"562c70171c3d4165a9cad3b3"}' http://localhost:3000/taskcreate
+
+
+curl -X POST -H "Content-Type:application/json" -d '{"Content":"my third comment","TaskId":"562fccb5a4b706b44f734e9e","UserId":"562eaec6c6f949b9233a760d"}' http://localhost:3000/commentcreate
+
+
+// create status 1
+curl -X POST -H "Content-Type:application/json" -d '{"TaskId":"562eaf19c6f949b9233a760f","StatusUpdate":"1","CreatedBy":"562c70171c3d4165a9cad3b3"}' http://localhost:3000/TaskStatusCreate
+
+
+var statusSchema = new Schema({"TaskId":"562eaf19c6f949b9233a760f","StatusUpdate":"1","CreatedBy":"562c70171c3d4165a9cad3b3"});
+
+
+
+
+
+562eaf19c6f949b9233a760f
+
+Content:"my first comment","TaskId":"562eaf19c6f949b9233a760f","UserId":"562eaec6c6f949b9233a760d"
+  }
+
+
+
+  StartDate : Date,
+    AssignedTo : Number,
+    IsSeen : {
+        type: Boolean,
+        default: false
+    },
+    Title: {
+        type: String,
+        required: 'Task title is required'
+    },
+    IsActive: {
+        type: Boolean,
+        default: false
+    },
+
+
+
+{  IsSeen : 0,
+    AssignedTo : 562c70171c3d4165a9cad3b3,
+    Title: 'Do your homework',
+    IsActive: 1,
+    IsReward: 0,
+    Reward: 'Test',
+    CreatedBy: 562c70171c3d4165a9cad3b3      
+}
